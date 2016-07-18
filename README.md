@@ -1,2 +1,1 @@
-# Html5Basics
-HTML-5 basics learning for beginners.
+This is a sample profile page.
