@@ -22,12 +22,17 @@ hr {
 	color: gray;
 }
 
-.img-responsive{
+.title-super {
+	font-size: 40px;
+}
+
+.main{
 	width: 1140px;
 	height: 350px;
 }
 
-.logo{
+.title-logo{
 	height: 100px;
 	width: 100px;
+	margin: 20px;	
 }
