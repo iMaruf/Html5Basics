@@ -1,0 +1,33 @@
+body{
+	font-family: 'Lato', sans-serif;
+	color: black;
+	font-weight: 300;
+	background-color: #f2f2f1;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 2px solid darkgray;
+	margin: 1em 0;
+	padding: 0;
+}
+
+.text-thin{
+	font-weight: 100;
+}
+
+.text-muted{
+	color: gray;
+}
+
+.img-responsive{
+	width: 1140px;
+	height: 350px;
+}
+
+.logo{
+	height: 100px;
+	width: 100px;
+}
