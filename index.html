@@ -7,8 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>My Portfolio.</title>
 		<link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	</head>
 	<body>
 		<div class="container">
@@ -16,7 +17,7 @@
 				<div class="col-md-6">
 					<img class="title-logo" src="./images/Aariz.png" alt="Site logo">
 				</div>
-				<div class="col-md-6 text-right text-uppercase">
+				<div class="col-md-6 text-right text-uppercase header">
 					<h1 class="title-super text-thin">Kamruzzaman Maruf</h1>
 					<h4>Frontend Web Developer</h4>
 				</div>
@@ -26,20 +27,18 @@
 					<hr>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-3 text-uppercase text-center">
-					<h4><a href="#home.html">Home</a></h4>
-				</div>
-				<div class="col-md-3 text-uppercase text-center">
-					<h4><a href="#narchur.html">What we use</a></h4>
-				</div>
-				<div class="col-md-3 text-uppercase text-center">
-					<h4><a href="#countuct.html">Our portfolio</a></h4>
-				</div>
-				<div class="col-md-3 text-uppercase text-center">
-					<h4><a href="#aboutme.html">About us</a></h4>
-				</div>
-			</div>
+			
+			<ul class="topnav" id="myTopnav">
+				<li><a class="active" href="#home">Home</a></li>
+				<li><a class="font" href="#use">What we use</a></li>
+				<li><a href="#portfolio">Our portfolio</a></li>
+				<li><a class="font" href="#about">About us</a></li>
+				<li><a href="#blog">Blog</a></li>
+				<li class="icon">
+					<a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">&#9776;</a>
+				</li>
+			</ul>
+			
 			<div class="row">
 				<div class="col-md-12">
 					<img class="img-responsive main" src="./images/Aariz.png" alt="Main image!">
@@ -65,6 +64,16 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+		</script>
 	</body>
 
 </html>
