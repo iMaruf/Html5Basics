@@ -1,91 +1,100 @@
-body{
-	font-family: 'Lato', sans-serif;
-	color: black;
-	font-weight: 300;
-	background-color: #f2f2f1;
-}
-
-hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 2px solid darkgray;
-	margin: 1em 0;
-	padding: 0;
-}
-
-.text-thin{
-	font-weight: 100;
-}
-
-.text-muted{
-	color: gray;
-}
-
-.title-super {
-	font-size: 40px;
-}
-
-.main{
-	width: 1140px;
-	height: 450px;
-}
-
-.title-logo{
-	height: 100px;
-	width: 100px;
-	margin: 20px;	
-}
-
-.font {
-	font-style: italic;
-}
-
-body {margin: 0;}
-
-ul.topnav {
-	list-style-type: none;
+body, html {
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
-	background-color: #333;
+	width: 100%;
+	height: 100%;
 }
 
-ul.topnav li {float: left;}
+body{
+	font-family: Roboto;
+	font-size: 12px;
+	line-height: 1.2em;
+	color: #424242;
+}
 
-ul.topnav li a {
+h1, h4, {
+	margin: 0;
+}
+
+header, nav, div {
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/*
+*Header
+*/
+
+.header {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+	min-height: 56px;
+	transition: min-height 0.3s;
+}
+
+.header__inner {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header__logo {
+	height: 72px;
+	margin-right: 1em;
+	vertical-align: top;
+	margin-top: 12px;
+}
+
+.header__title {
+	font-weight: 300;
+	font-size: 3em;
+	margin: 0.75em 0.25em;
 	display: inline-block;
-	color: #f2f2f2;
+	color: #212121;
+	text-align: right;
+}
+
+/*
+*top Level Navegation
+*/
+
+.nav {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav__list {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.nav__item {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 24%;
 	text-align: center;
-	padding: 14px 16px;
+	line-height: 24px;
+	padding: 24px;
+	text-transform: uppercase;
+}
+
+.nav a {
 	text-decoration: none;
-	transition: 0.3s;
-	font-size: 17px;
+	color: #616161;
+	padding: 1.5em;
 }
 
-ul.topnav li a:hover {background-color: #555;}
-
-@media screen and (max-width: 680px) {
-	ul.topnav li:not(first-child) {display: none;}
-	ul.topnav li.icon{
-		float: right;
-		display: inline-block;
-	}
-}
-
-@media screen and (max-width: 680px) {
-	ul.topnav.responsive {position: relative;}
-	ul.topnav.responsive li.icon {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	ul.topnav.responsive li {
-		float: none;
-		display: inline;
-	}
-	ul.topnav.responsive li a {
-		display: block;
-		text-align: left;
-	}
+.nav a:hover {
+	text-decoration: underline;
+	color: #212121;
 }

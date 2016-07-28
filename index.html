@@ -3,76 +3,64 @@
 
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>My Portfolio.</title>
-		<link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	</head>
+	
 	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<img class="title-logo" src="./images/Aariz.png" alt="Site logo">
-				</div>
-				<div class="col-md-6 text-right text-uppercase header">
-					<h1 class="title-super text-thin">Kamruzzaman Maruf</h1>
-					<h4>Frontend Web Developer</h4>
-				</div>
+		<header class="header">
+			<div class="header__inner">
+				<img class="header__logo" src="images/Aariz.png" alt="site logo">
+				<h1 class="header__title">
+					Kamruzzaman Maruf
+
+				</h1>
+
+				<a id="menu" class="header__menu">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+					</svg>
+				</a>
+				<h4>
+					Frintend Web Developer
+				</h4>
 			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<hr>
-				</div>
-			</div>
-			
-			<ul class="topnav" id="myTopnav">
-				<li><a class="active" href="#home">Home</a></li>
-				<li><a class="font" href="#use">What we use</a></li>
-				<li><a href="#portfolio">Our portfolio</a></li>
-				<li><a class="font" href="#about">About us</a></li>
-				<li><a href="#blog">Blog</a></li>
-				<li class="icon">
-					<a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">&#9776;</a>
-				</li>
+		</header>
+
+		<nav id="drawer" class="nav">
+			<ul class="nav__list">
+				<li class="nav__item"><a href="#home">Home</a></li>
+				<li class="nav__item"><a href="#use">What we use</a></li>
+				<li class="nav__item"><a href="#portfolio">Our portfolio</a></li>
+				<li class="nav__item"><a href="#about">About us</a></li>
 			</ul>
-			
-			<div class="row">
-				<div class="col-md-12">
-					<img class="img-responsive main" src="./images/Aariz.png" alt="Main image!">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="text-muted">Featured Work</h2>
-				</div>
-			</div>
-			<div class="row text-center">
-				<div class="col-md-4">
-					<img class="img-responsive" src="./images/Aariz.png" alt="Work-1">
-					<h3 class="text-uppercase">Aariz</h3>
-				</div>
-				<div class="col-md-4">
-					<img class="img-responsive" src="./images/Aariz.png" alt="Work-1">
-					<h3 class="text-uppercase">Aariz</h3>
-				</div>
-				<div class="col-md-4">
-					<img class="img-responsive" src="./images/Aariz.png" alt="Work-1">
-					<h3 class="text-uppercase">Aariz</h3>
-				</div>
-			</div>
-		</div>
+		</nav>
+
+	    <div>
+	      <picture>
+	        
+	      </picture>
+	    </div>
+
 		<script>
-			function myFunction() {
-				var x = document.getElementById("myTopnav");
-				if (x.className === "topnav") {
-					x.className += " responsive";
-				} else {
-					x.className = "topnav";
-				}
-			}
+			/*
+			* Open the drawer when the menu ison is clicked.
+			*/
+			var menu = document.querySelector('#menu');
+			var main = document.querySelector('main');
+			var drawer = document.querySelector('.nav');
+
+			menu.addEventListener('click', function(e) {
+				drawer.classList.toggle('open');
+				e.stopPropagation();
+			});
+			main.addEventListener('click', function() {
+				drawer.classList.remove('open');
+			});
 		</script>
 	</body>
 
